@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="572.0" prefWidth="986.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gestionutilisateur.FXMLDocumentController">
+   <children>
+      <ImageView fitHeight="572.0" fitWidth="433.0" layoutX="-110.0" layoutY="-1.0" opacity="0.78" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@icon/art2.jpg" />
+         </image>
+      </ImageView>
+      <VBox layoutX="36.0" layoutY="47.0" prefHeight="287.0" prefWidth="126.0" spacing="15.0">
+         <children>
+            <Label prefHeight="50.0" prefWidth="88.0" text="Id">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <font>
+                  <Font name="Arial Nova Cond" size="19.0" />
+               </font>
+            </Label>
+            <Label prefHeight="50.0" prefWidth="88.0" text="Nom">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <font>
+                  <Font name="Arial Nova Cond" size="19.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="14.0" prefHeight="50.0" prefWidth="88.0" text="Prenom">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <font>
+                  <Font name="Arial Nova Cond" size="19.0" />
+               </font>
+            </Label>
+            <Label prefHeight="50.0" prefWidth="151.0" text="Addresse Mail">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <font>
+                  <Font name="Arial Nova Cond" size="19.0" />
+               </font>
+            </Label>
+            <Label prefHeight="46.0" prefWidth="128.0" text="Mot de passe">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <font>
+                  <Font name="Arial Nova Cond" size="19.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <VBox layoutX="183.0" layoutY="47.0" prefHeight="287.0" prefWidth="163.0" spacing="15.0">
+         <children>
+            <TextField fx:id="tfid" prefHeight="50.0" prefWidth="190.0" />
+            <TextField fx:id="tfnom" prefHeight="48.0" prefWidth="190.0" />
+            <TextField fx:id="tfprenom" prefHeight="50.0" prefWidth="190.0" />
+            <TextField fx:id="tfaddresse" prefHeight="48.0" prefWidth="190.0" />
+            <TextField fx:id="tfnum" prefHeight="47.0" prefWidth="190.0" />
+         </children>
+      </VBox>
+      <Button fx:id="btnajouter" layoutX="36.0" layoutY="395.0" mnemonicParsing="false" onAction="#handleButtonAction" text="Ajouter Admin" />
+      <Button fx:id="btnmodifier" layoutX="183.0" layoutY="395.0" mnemonicParsing="false" onAction="#handleButtonAction" text="Modifier" />
+      <Button fx:id="btnsupprimer" layoutX="286.0" layoutY="395.0" mnemonicParsing="false" onAction="#removeCustomer" text="Supprimer" />
+      <TableView fx:id="information" layoutX="375.0" layoutY="46.0" onSort="#handleButtonAction" prefHeight="287.0" prefWidth="522.0">
+        <columns>
+          <TableColumn fx:id="colid" prefWidth="118.0" text="Id" />
+          <TableColumn fx:id="colnom" prefWidth="92.0" text="Nom" />
+            <TableColumn fx:id="colprenom" prefWidth="112.0" text="Prenom" />
+            <TableColumn fx:id="coladdresse" minWidth="0.0" prefWidth="85.0" text="Addresse" />
+            <TableColumn fx:id="colnum" prefWidth="112.0" text="Mot de passe" />
+        </columns>
+      </TableView>
+      <ImageView fitHeight="54.0" fitWidth="71.0" layoutX="28.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@icon/11.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="btnar" layoutX="382.0" layoutY="491.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="94.0" text="Articles" />
+      <Button fx:id="btncom" layoutX="500.0" layoutY="491.0" mnemonicParsing="false" text="Commandes" />
+      <Button fx:id="btnblo" layoutX="639.0" layoutY="491.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="111.0" text="Blogs" />
+      <Button fx:id="btneven" layoutX="774.0" layoutY="491.0" mnemonicParsing="false" text="Evenement" />
+   </children>
+</AnchorPane>
